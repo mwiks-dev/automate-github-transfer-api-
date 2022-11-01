@@ -13,7 +13,7 @@ class TransferRepos:
     def __init__(self, token, username, transfer_to):
         '''Initialize the class variables'''
         _BASE_URL = "https://api.github.com/{ext}"
-        self.phrase = "react-hooks-components-basics " #specify the repository keyword you wanna transfer
+        self.phrase = "Phase-3-ruby-oo-basics-setter-and-getter-methods " #specify the repository keyword you wanna transfer
         self._username = username
         self._transfer_to = transfer_to
 
@@ -39,7 +39,7 @@ class TransferRepos:
         This method returns a list of repositories you want to move
         It calls the GitHub Get repos API given the phrase and your username
         '''
-        phrase="phase-3-methods"
+        phrase="JS-Arithmetic-Lab4" #specify the repository keyword you want to transfer
         base_url = f"https://api.github.com/users/{username}/repos?per_page=1000"
         url = request.Request(base_url, method='GET')
 
@@ -107,9 +107,9 @@ class TransferRepos:
 
 ''' Creating an Instance of your class and giving the object actual values'''
 
-tkn = "ghp_v6k5m2K7FOdYyqdZ17VY9H" #insert your GitHub Token
-from_user = "kilonzif" #insert your GitHub Username
-new_owner = "FlatironMoringa" #insert your new organization to transfer to 
+tkn = "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" #insert your GitHub Token
+from_user = "mwiks-dev" #insert your GitHub Username
+new_owner = "Flatiron-Moringa" #insert your new organization to transfer to 
 
 
 trans= TransferRepos(tkn,from_user,new_owner)
