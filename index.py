@@ -1,6 +1,8 @@
 import json
 from urllib import request
 import requests
+from decouple import config
+
 
 
 class ResponseError(Exception):
@@ -107,7 +109,7 @@ class TransferRepos:
 
 ''' Creating an Instance of your class and giving the object actual values'''
 
-tkn = "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" #insert your GitHub Token
+tkn = config('GITHUB_TOKEN') #insert your GitHub Token
 from_user = "mwiks-dev" #insert your GitHub Username
 new_owner = "Flatiron-Moringa" #insert your new organization to transfer to 
 
